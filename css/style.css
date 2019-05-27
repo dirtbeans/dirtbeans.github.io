@@ -1,0 +1,952 @@
+:root {
+  
+/* -------------------------------- 
+  
+FONTS 
+
+Here you can:
+  pick one of these font pairings by commenting/uncommenting the options below, then by
+    commenting/uncommenting the matching stylesheet inside the <head> tag of index.html
+
+This is how each font is used:
+  --primary-font: body text, readable and not too fancy
+  --secondary-font: header/accent text with some personality
+  
+Here are the font/text style classes you can use:
+  add the class text-primary or text-secondary to an element to change the font of text inside it
+  add the class text-primary directly to h1, h2, etc. elements to change the font of the header
+  wrap a single word or sentence in a span tag, like <span class="text-secondary"><span>
+  add text-bold, text-extra-bold, or text-italic to change the font style
+  
+*/
+  
+/*   --primary-font: 'Open Sans', sans-serif;
+  --secondary-font: 'Libre Baskerville', serif; */
+
+/*   --primary-font: 'Asap', sans-serif;
+  --secondary-font: 'Flamenco', cursive; */
+
+/*   --primary-font: 'Alice', serif;
+  --secondary-font: 'Playfair Display', serif; */
+
+  --primary-font: 'Roboto', sans-serif;
+  --secondary-font: 'Space Mono', monospace;
+  
+/* -------------------------------- 
+
+COLORS 
+  
+Here you can:
+  change the hex values (e.g. '#F8EDEB') of the current color scheme
+  comment/uncomment existing color schemes
+  
+This is how each color is used:
+  --color-1 = main background
+  --color-2 = content box
+  --color-3 = accent color/header text
+  --color-4 = accent color/background
+  --color-5 = accent color/background
+  --color-6 = accent color/background
+  --color-7 = black-ish/body text
+  --color-8 = white-ish
+  
+Here are color classes you can use:
+  add text-color-3 to an element to make its text (or icon, like the nav arrows) accent color 3
+  add bg-color-8 to an element to make its background white
+  change the border color of an element with a border class like border-top by adding border-color-4
+*/
+  --color-1: #1A181B; 
+  --color-2: #B1C18F;
+  --color-3: #7A1126;
+  --color-4: #84132A;
+  --color-5: #C15E20;
+  --color-6: #C15E20;
+  --color-7: #1A181B;
+  --color-8: #E9D6B0;
+/*   --color-9: #7A1126; */
+/*   
+  --color-1: #F8EDEB; 
+  --color-2: #EDBBB2;
+  --color-3: #FE5A3F;
+  --color-4: #002626;
+  --color-5: #5C85EC;
+  --color-6: #FEDD02;
+  --color-7: #1C2431;
+  --color-8: #FFFFFF;
+ */
+    /*desc of colors*/
+  
+/*   --color-1: #1A181B; 
+  --color-2: #958A93;
+  --color-3: #275656;
+  --color-4: #C3D8D1;
+  --color-5: #464870;
+  --color-6: #1A181B;
+  --color-7: #1A181B;
+  --color-8: #C3D8D1; */
+
+  
+/*     --color-1: #FFFCED;
+    --color-2: #FAE887;
+    --color-3: #6A4FA0;
+    --color-4: #F2D216;
+    --color-5: #AA67FE;
+    --color-6: #374147;
+    --color-7: #000000;
+    --color-8: #FFFFFF; */
+  
+/*   --color-1: #D8DBE2;
+  --color-2: #ADE1E5;
+  --color-3: #58355E;
+  --color-4: #99D19C;
+  --color-5: #73AB84;
+  --color-6: #79C7C5;
+  --color-7: #000501;
+  --color-8: #D8DBE2; */
+
+  
+  
+/* -------------------------------- 
+
+IMAGES
+  
+  Here you can:
+    change the background images in use for the opacity/fixed/parallax transition effects by
+      replacing the url inside url('') for the associated section
+  
+  This is how you add or select new images:
+    select 'assets' in the navigation pane on the left
+    to upload a new image, click 'add asset' then 'upload'
+    to get the url of a new or existing image, click on the image in 'assets' and click 'copy'
+    to use a background image, replace a --bg-image- url below
+    to use a gallery or standalone image, copy the tag below, paste it where you want it in index.html,
+      with any of the image or image wrapper classes listed below:
+        <div class="image-wrap your-classes-here">
+          <img src="your-url-here" class="your-classes-here" />
+        </div>
+  
+  Note:
+  Images are fiddly so I didn't include many utility classes. If there is interest, we'll play around with adding some during the workshop!
+*/
+  
+  --pattern-1: url('https://cdn.glitch.com/117b1aaa-1964-4591-a674-86fd0ff4d2ca%2Fcubes.png?1555360182973');
+  --pattern-2: url('https://cdn.glitch.com/117b1aaa-1964-4591-a674-86fd0ff4d2ca%2Fsmall-dashed-squares.png?1555360183110');
+  --pattern-3: url('https://cdn.glitch.com/117b1aaa-1964-4591-a674-86fd0ff4d2ca%2Fsubtle-vertical-lines-dark.png?1555360183191');
+  --pattern-4: url('https://cdn.glitch.com/117b1aaa-1964-4591-a674-86fd0ff4d2ca%2Fworn-dots.png?1555360183332');
+  
+  --bg-image-1: url('https://cdn.glitch.com/c121c1f4-49d6-401b-8eda-5d8bcbaa870b%2Fpexels-photo-414645.jpeg?1558884634881');
+  --bg-image-2: url('https://cdn.glitch.com/c121c1f4-49d6-401b-8eda-5d8bcbaa870b%2Ffun%20leaves.jpeg?1558917303359');
+  --bg-image-3: url('https://cdn.glitch.com/c121c1f4-49d6-401b-8eda-5d8bcbaa870b%2Fblacksand.jpeg?1558916363328');
+  --bg-image-4: url('https://cdn.glitch.com/117b1aaa-1964-4591-a674-86fd0ff4d2ca%2Fvintage-light-string.jpg?1551394495071');
+  
+/*   --icon-nav: url(../img/cd-icon-arrow.svg) no-repeat center center; */
+  --icon-nav: url(../img/icon-triangle.svg) no-repeat center center;
+  
+  --icon-facebook: url(../img/icon-facebook.svg) no-repeat center center;
+  --icon-linkedin: url(../img/icon-linkedin.svg) no-repeat center center;
+  --icon-medium: url(../img/icon-medium.svg) no-repeat center center;
+  --icon-twitter: url(../img/icon-twitter.svg) no-repeat center center;
+  --icon-github: url(../img/icon-github.svg) no-repeat center center;
+  --icon-instagram: url(../img/icon-instagram.svg) no-repeat center center;
+  
+  /* more social (and other) icons available at https://icons8.com/icons/set/social%20media */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------- 
+
+CSS Reset
+
+-------------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1.6rem;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  font-family: var(--primary-font);
+  color: var(--color-7);
+  background-color: var(--color-1);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  /* never visible - this is used in jQuery to check the current MQ */
+  content: 'mobile';
+  display: none;
+}
+@media only screen and (min-width: 1050px) {
+  body::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+a {
+  color: var(--color-3);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+  color: var(--color-3);
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+h3 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+}
+
+hr {
+  color: var(--color-3);
+}
+p {
+  margin: 0.75rem auto;
+}
+
+/* -------------------------------- 
+
+Main Components 
+
+-------------------------------- */
+@media only screen and (min-width: 1050px) {
+  body[data-hijacking="on"] {
+    overflow: hidden;
+  }
+}
+
+.cd-section {
+  height: 100vh;
+  position: relative;
+}
+
+div.section-body {
+  height: 100vh;
+}
+.cd-section:first-of-type > div.section-body {
+  background-color: var(--color-1);
+}
+.cd-section:first-of-type > div.section-body::before {
+  /* alert -> all scrolling effects are not visible on small devices */
+  content: 'Effects not visible on mobile!';
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 20px;
+  z-index: 2;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #6a7083;
+}
+.cd-section:nth-of-type(2) > div.section-body {
+  background-color: var(--color-2);
+}
+.cd-section:nth-of-type(3) > div.section-body {
+  background-color: var(--color-3);
+}
+.cd-section:nth-of-type(4) > div.section-body {
+  background-color: var(--color-4);
+}
+.cd-section:nth-of-type(5) > div.section-body {
+  background-color: var(--color-5);
+}
+[data-animation="parallax"] .cd-section > div.section-body, [data-animation="fixed"] .cd-section > div.section-body, [data-animation="opacity"] .cd-section > div.section-body {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+[data-animation="parallax"] .cd-section:first-of-type > div.section-body, [data-animation="fixed"] .cd-section:first-of-type > div.section-body, [data-animation="opacity"] .cd-section:first-of-type > div.section-body {
+  background-image: var(--bg-image-1);
+}
+[data-animation="parallax"] .cd-section:nth-of-type(2) > div.section-body, [data-animation="fixed"] .cd-section:nth-of-type(2) > div.section-body, [data-animation="opacity"] .cd-section:nth-of-type(2) > div.section-body {
+  background-image: var(--bg-image-2);
+}
+[data-animation="parallax"] .cd-section:nth-of-type(3) > div.section-body, [data-animation="fixed"] .cd-section:nth-of-type(3) > div.section-body, [data-animation="opacity"] .cd-section:nth-of-type(3) > div.section-body {
+  background-image: var(--bg-image-3);
+}
+[data-animation="parallax"] .cd-section:nth-of-type(4) > div.section-body, [data-animation="fixed"] .cd-section:nth-of-type(4) > div.section-body, [data-animation="opacity"] .cd-section:nth-of-type(4) > div.section-body {
+  background-image: var(--bg-image-4);
+}
+
+@media only screen and (min-width: 1050px) {
+  [data-hijacking="on"] .cd-section {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  [data-hijacking="on"] .cd-section > div.section-body {
+    visibility: visible;
+  }
+  [data-hijacking="off"] .cd-section > div.section-body {
+    opacity: 0;
+  }
+  [data-animation="rotate"] .cd-section {
+    /* enable a 3D-space for children elements */
+    -webkit-perspective: 1800px;
+    -moz-perspective: 1800px;
+    perspective: 1800px;
+  }
+  [data-hijacking="on"][data-animation="rotate"] .cd-section:not(:first-of-type) {
+    -webkit-perspective-origin: center 0;
+    -moz-perspective-origin: center 0;
+    perspective-origin: center 0;
+  }
+  [data-animation="scaleDown"] .cd-section > div.section-body, [data-animation="gallery"] .cd-section > div.section-body, [data-animation="catch"] .cd-section > div.section-body {
+    box-shadow: 0 0 0 rgba(25, 30, 46, 0.4);
+  }
+  [data-animation="opacity"] .cd-section.visible > div.section-body {
+    z-index: 1;
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .cd-section:first-of-type > div.section-body::before {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1050px) {
+  .cd-section > div.section-body {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Force Hardware Acceleration */
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  [data-hijacking="on"] .cd-section > div.section-body {
+    position: absolute;
+  }
+  [data-animation="rotate"] .cd-section > div.section-body {
+    -webkit-transform-origin: center bottom;
+    -moz-transform-origin: center bottom;
+    -ms-transform-origin: center bottom;
+    -o-transform-origin: center bottom;
+    transform-origin: center bottom;
+  }
+}
+
+.cd-vertical-nav {
+  /* lateral navigation */
+  position: fixed;
+  z-index: 1;
+  right: 3%;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: none;
+}
+.cd-vertical-nav a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-color: var(--color-5);
+  -webkit-mask: var(--icon-nav);
+  mask: var(--icon-nav);
+}
+.cd-vertical-nav a.cd-prev {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  margin-bottom: 10px;
+}
+.cd-vertical-nav a.inactive {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+  transition: opacity 0.2s 0s, visibility 0s 0.2s;
+}
+@media only screen and (min-width: 1050px) {
+  .cd-vertical-nav {
+    display: block;
+  }
+}
+
+/*adding 2 boxes here small and big */
+article.content-box-small {
+  padding: 3rem;
+  background-color: var(--color-2);
+  position: absolute;
+  top: 60%;
+  transform: translate(20%, 50%);
+  width: 75%;
+  height: 25%;
+  margin: 0 auto;
+}
+article.content-box-big {
+  min-height: 65%;
+  top: 0%;
+  right: 35%;
+  transform: unset;
+}
+/* Elements */
+
+
+/* content box styles */
+article.content-box {
+  padding: 3rem;
+  background-color: var(--color-2);
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+  width: 45%;
+  margin: 0 auto;
+}
+
+article.content-box-center-left {
+  transform: translate(10%, -50%);
+}
+
+article.content-box-center-right {
+  transform: translate(100%, -50%);
+}
+
+article.content-box-center-bottom {
+  min-height: 65%;
+  bottom: 0%;
+  transform: translate(50%, -20%);
+}
+
+article.content-box-left-bottom {
+  min-height: 65%;
+  bottom: 0%;
+  transform: translate(20%, -20%);
+}
+
+article.content-box-right-bottom {
+  min-height: 65%;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(-20%, -20%);
+}
+
+article.content-box-center-top {
+  min-height: 65%;
+  top: 0%;
+  transform: translate(50%, 0%);
+}
+
+article.content-box-left-top {
+  min-height: 65%;
+  top: 0%;
+  left: 10%;
+  transform: unset;
+}
+
+article.content-box-right-top {
+  min-height: 65%;
+  top: 0%;
+  right: 10%;
+  transform: unset;
+}
+
+article.content-box-top {
+  min-height: 65%;
+  top: 0%;
+  transform: unset;
+}
+
+article.content-box-left-top {
+  min-height: 65%;
+  top: 0%;
+  transform: unset;
+}
+
+article.content-box-right-top {
+  min-height: 65%;
+  top: 0%;
+  transform: unset;
+}
+
+article.content-box-transparent {
+  background-color: unset;
+}
+
+article.content-box-semitransparent {
+  
+}
+
+article.content-box-dark {
+  background-color: var(--color-7);
+  color: var(--color-8);
+}
+article.content-box-dark h1 {
+  color: var(--color-2);
+}
+
+/* gallery box and image styles */
+article.gallery-box {
+  max-width: 40vw;
+  max-height: 90vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+article.gallery-box div.gallery-image-wrap {
+  max-width: 100%;
+  height: 30vh;
+  padding: 2vh;
+  overflow: hidden;
+}
+article.gallery-box img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+div.gallery-image-wrap.image-round {
+  width: 30vh;
+  height: 30vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+div.gallery-image-wrap.image-square {
+  
+}
+div.gallery-image-wrap.image-shadow {
+  
+}
+
+.image-wrap {
+  margin: 0 auto;
+}
+.image-wrap img {
+  max-width: 100%;
+}
+.gallery-image-wrap.image-rounded-corners,
+.image-wrap.image-rounded-corners {
+  border-radius: 25px;
+  overflow: hidden;
+}
+.image-wrap.image-round {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.image-wrap.image-round img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+
+
+/* border styles */
+.border {
+  border: solid 1px var(--color-3);
+  padding: 1rem;
+}
+.border-top {
+  border-top: solid 1px var(--color-3);
+  padding-top: 1rem;
+}
+.border-bottom {
+  border-bottom: solid 1px var(--color-3);
+  padding-bottom: 1rem;
+}
+.border-left {
+  border-left: solid 1px var(--color-3);
+  padding-left: 1rem;
+}
+.border-right {
+  border-right: solid 1px var(--color-3);
+  padding-right: 1rem;
+}
+.border-thin {
+  border-width: 1px;
+}
+.border-thick{
+  border-width: 3px;
+}
+.border-extra-thick {
+  border-width: 40px;
+}
+.border-dashed {
+  border-style: dashed;
+}
+.border-double {
+  border-style: double;
+}
+.border-dotted {
+  border-style: dotted;
+}
+.border-color-1 {
+  border-color: unset;
+  border-color: var(--color-1);
+}
+.border-color-2 {
+  border-color: unset;
+  border-color: var(--color-2);
+}
+.border-color-3 {
+  border-color: unset;
+  border-color: var(--color-3);
+}
+.border-color-4 {
+  border-color: unset;
+  border-color: var(--color-4);
+}
+.border-color-5 {
+  border-color: unset;
+  border-color: var(--color-5);
+}
+.border-color-6 {
+  border-color: unset;
+  border-color: var(--color-6);
+}
+.border-color-7 {
+  border-color: unset;
+  border-color: var(--color-7);
+}
+.border-color-8 {
+  border-color: unset;
+  border-color: var(--color-8);
+}
+
+
+/* text styles */
+.text-bold {
+  font-weight: 700;
+}
+.text-extra-bold {
+  font-weight: 900; /* this works with some fonts, not with others- if it looks the same as text-bold, that's just because that font doesn't have more variants available */
+}
+.text-italic {
+  font-style: italic;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+.text-align-left {
+  text-align: left;
+}
+.text-primary {
+  font-family: var(--text-primary);
+}
+.text-secondary {
+  font-family: var(--text-secondary);
+}
+.text-color-1 {
+  color: var(--color-1);
+}
+.text-color-2 {
+  color: var(--color-2);
+}
+.text-color-3 {
+  color: var(--color-3);
+}
+.text-color-4 {
+  color: var(--color-4);
+}
+.text-color-5 {
+  color: var(--color-5);
+}
+.text-color-6 {
+  color: var(--color-6);
+}
+.text-color-7 {
+  color: var(--color-7);
+}
+.text-color-8 {
+  color: var(--color-8);
+}
+
+
+/* element background styles */
+.bg-color-1 {
+  background-color: var(--color-1);
+}
+.bg-color-2 {
+  background-color: var(--color-2);
+}
+.bg-color-3 {
+  background-color: var(--color-3);
+}
+.bg-color-4 {
+  background-color: var(--color-4);
+}
+.bg-color-5 {
+  background-color: var(--color-5);
+}
+.bg-color-6 {
+  background-color: var(--color-6);
+}
+.bg-color-7 {
+  background-color: var(--color-7);
+}
+.bg-color-8 {
+  background-color: var(--color-8);
+}
+.bg-pattern-1 {
+  background-image: var(--pattern-1);
+  background-repeat: repeat;
+}
+.bg-pattern-2 {
+  background-image: var(--pattern-2);
+  background-repeat: repeat;
+}
+.bg-pattern-3 {
+  background-image: var(--pattern-3);
+  background-repeat: repeat;
+}
+.bg-pattern-4 {
+  background-image: var(--pattern-4);
+  background-repeat: repeat;
+}
+
+/* margin and padding styles */
+.margin-top-lg {
+  margin-top: 3em;
+}
+.margin-right-lg {
+  margin-right: 3em;
+}
+.margin-bottom-lg {
+  margin-bottom: 3em;
+}
+.margin-left-lg {
+  margin-left: 3em;
+}
+.margin-top-md {
+  margin-top: 2em;
+}
+.margin-right-md {
+  margin-right: 2em;
+}
+.margin-bottom-md {
+  margin-bottom: 2em;
+}
+.margin-left-md {
+  margin-left: 2em;
+}
+.margin-top-sm {
+  margin-top: 1em;
+}
+.margin-right-sm {
+  margin-right: 1em;
+}
+.margin-bottom-sm {
+  margin-bottom: 1em;
+}
+.margin-left-sm {
+  margin-left: 1em;
+}
+.padding-top-lg {
+  padding-top: 3em;
+}
+.padding-right-lg {
+  padding-right: 3em;
+}
+.padding-bottom-lg {
+  padding-bottom: 3em;
+}
+.padding-left-lg {
+  padding-left: 3em;
+}
+.padding-top-md {
+  padding-top: 2em;
+}
+.padding-right-md {
+  padding-right: 2em;
+}
+.padding-bottom-md {
+  padding-bottom: 2em;
+}
+.padding-left-md {
+  padding-left: 2em;
+}
+.padding-top-sm {
+  padding-top: 1em;
+}
+.padding-right-sm {
+  padding-right: 1em;
+}
+.padding-bottom-sm {
+  padding-bottom: 1em;
+}
+.padding-left-sm {
+  padding-left: 1em;
+}
+
+/* social icons */
+.social-icon-wrap {
+  position: fixed;
+  z-index: 1;
+  right: 2.5%;
+  height: 25%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.social-icon-wrap-top {
+  top: 25%;
+  bottom: auto;
+}
+.social-icon-wrap-bottom {
+  bottom: 0%;
+  top: auto;
+}
+
+.social-icon a {
+  display: block;
+  height: 50px;
+  width: 50px;
+  /* image replace */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  background-color: var(--color-3);
+  -webkit-mask: var(--icon-twitter);
+  mask: var(--icon-twitter);
+}
+
+.social-icon.social-icon-twitter a {
+  -webkit-mask: var(--icon-twitter);
+  mask: var(--icon-twitter);
+}
+.social-icon.social-icon-linkedin a {
+  -webkit-mask: var(--icon-linkedin);
+  mask: var(--icon-linkedin);
+}
+.social-icon.social-icon-medium a {
+  -webkit-mask: var(--icon-medium);
+  mask: var(--icon-medium);
+}
+.social-icon.social-icon-facebook a {
+  -webkit-mask: var(--icon-facebook);
+  mask: var(--icon-facebook);
+}
+.social-icon.social-icon-github a {
+  -webkit-mask: var(--icon-github);
+  mask: var(--icon-github);
+}
+.social-icon.social-icon-instagram a {
+  -webkit-mask: var(--icon-instagram);
+  mask: var(--icon-instagram);
+}
